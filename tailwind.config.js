@@ -16,7 +16,13 @@ export default {
         'outfit': ["Outfit", 'sans-serif']
       },
       screens: {
-        'xs' : '320px'
+        'xs' : '320px',
+      },
+      fontSize: {
+        'xxs' : '.5rem'
+      },
+      width: {
+        '45%' : '45%'
       }
     },
   },
