@@ -2,7 +2,7 @@
 export default function TrendingTN({trender, index} : {trender: {title: string, year: number, category: string, rating: string, thumbnail: {trending: {large: string}}, isBookmarked: boolean}, index: number}) {
 
     return (
-        <div key={index} className={`w-full h-32 mb-4 bg-cover bg-center rounded-lg relative`} style={{backgroundImage:`url(${trender.thumbnail.trending.large})`}}>
+        <div key={index} className={`w-full h-32 mb-4 bg-cover bg-center rounded-lg relative hover:grayscale`} style={{backgroundImage:`url(${trender.thumbnail.trending.large})`}}>
 
             <div className="absolute bg-black bg-opacity-50  rounded-xl top-2 right-2 p-2 hover:cursor-pointer">
                 {trender.isBookmarked ?
@@ -27,6 +27,10 @@ export default function TrendingTN({trender, index} : {trender: {title: string, 
                     <p className="text-xxs ml-1">{trender.rating}</p>
                 </div> 
                 <h1 className="text-xl">{trender.title}</h1>
+            </div>
+
+            <div className="z-10 w-full opacity-0 hover:opacity-100">
+                <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" className="hover:opacity-100"><path d="M15 0C6.713 0 0 6.713 0 15c0 8.288 6.713 15 15 15 8.288 0 15-6.712 15-15 0-8.287-6.712-15-15-15Zm-3 21V8l9 6.5-9 6.5Z" fill="#FFF"/></svg>
             </div>
 
         </div>

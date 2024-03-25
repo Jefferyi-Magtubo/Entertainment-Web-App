@@ -2,7 +2,7 @@
 export default function TN({movie, index} : {movie: {title: string, year: number, category: string, rating: string, thumbnail: {regular: {large: string}}, isTrending: boolean, isBookmarked: boolean}, index: number}) {
 
     return (
-        <div className="flex-col w-45% mb-2">
+        <div className="flex-col w-1/2 mb-2">
             <div key={index} className={`w-100% mr-2 h-24 bg-cover bg-center rounded-lg relative`} style={{backgroundImage:`url(${movie.thumbnail.regular.large})`}}>
                 <div className="absolute bg-black bg-opacity-50  rounded-xl top-2 right-2 p-2 hover:cursor-pointer">
                     {movie.isBookmarked ?
