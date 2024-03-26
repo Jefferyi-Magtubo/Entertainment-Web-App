@@ -2,3 +2,12 @@
     grid-template-columns: repeat(1fr, 2);
     gap: .1fr;
 }
+
+svg.category {
+    width: 20px;
+    height: 20px;
+
+}
+
+.slick-list {margin: 0 -.5em;}
+.slick-slide>div {padding: 0 .5em;}
