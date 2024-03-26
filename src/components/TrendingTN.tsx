@@ -3,7 +3,7 @@ export default function TrendingTN({trender, onClick} : {trender: {id: number, t
     console.log(trender.id)
 
     return (
-        <div key={trender.id} className={`w-full h-32 smh:h-48 sm:h-72 md:h-80  lg:h-100 mb-4 bg-cover bg-center rounded-lg relative hover:grayscale`} style={{backgroundImage:`url(${trender.thumbnail.trending.large})`}}>
+        <div key={trender.id} className={`w-full h-32 smh:h-48 sm:h-72 md:h-80  mb-4 bg-cover bg-center rounded-lg relative hover:grayscale`} style={{backgroundImage:`url(${trender.thumbnail.trending.large})`}}>
 
             <div className="absolute z-40 bg-black bg-opacity-50  rounded-xl top-2 right-2 p-2 md:p-3 hover:cursor-pointer" onClick={() => onClick(trender.id)}>
                 {trender.isBookmarked ?

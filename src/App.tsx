@@ -11,10 +11,15 @@ function App() {
   return (
     <MediaContext.Provider value={mediaDisplay}>
       <div className='lg:flex'>
-        <Header setMedia={setMedia} mediaDisplay={mediaDisplay}/>
-        <DisplayPage />        
-      </div>
+        <div className='flex-basis'>
+          <Header setMedia={setMedia} mediaDisplay={mediaDisplay}/>
+        </div>
 
+        <div className='flex-grow'>
+          <DisplayPage />   
+        </div>
+     
+      </div>
     </MediaContext.Provider>
   )
 }

@@ -4,7 +4,7 @@ export default function Header({setMedia, mediaDisplay} : {setMedia: Function, m
 
     return (
 
-        <header className="bg-darkBlue h-200 md:m-5 md:rounded-lg lg:flex-col lg:w-24 lg:h-96 p-4  flex justify-between items-center">
+        <header className="bg-darkBlue md:m-5 md:rounded-lg lg:flex-col lg:w-24 lg:h-96 p-4  flex justify-between items-center">
             <svg viewBox="0 0 33 27" width="30" height="auto" xmlns="http://www.w3.org/2000/svg"><path className='max-w-2' d="m26.463.408 3.2 6.4h-4.8l-3.2-6.4h-3.2l3.2 6.4h-4.8l-3.2-6.4h-3.2l3.2 6.4h-4.8l-3.2-6.4h-1.6a3.186 3.186 0 0 0-3.184 3.2l-.016 19.2a3.2 3.2 0 0 0 3.2 3.2h25.6a3.2 3.2 0 0 0 3.2-3.2V.408h-6.4Z" fill="#FC4747"/></svg>
 
             <div className="flex lg:flex-col justify-between items-center">

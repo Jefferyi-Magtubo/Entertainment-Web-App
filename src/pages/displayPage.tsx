@@ -88,7 +88,7 @@ export default function DisplayPage() {
     }
 
     return(
-        <main className="px-3 pr-1 py-2 md:-mt-2 lg:mt-2">
+        <main className="px-3 pr-1 py-2 md:-mt-2 lg:mt-2 lg:mr-2">
             <div className="flex">
                 <label htmlFor="search" className="hover:cursor-pointer">
                     <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" className="mr-2"><path d="M27.613 25.72 23.08 21.2a10.56 10.56 0 0 0 2.253-6.533C25.333 8.776 20.558 4 14.667 4S4 8.776 4 14.667c0 5.89 4.776 10.666 10.667 10.666A10.56 10.56 0 0 0 21.2 23.08l4.52 4.533a1.333 1.333 0 0 0 1.893 0 1.333 1.333 0 0 0 0-1.893ZM6.667 14.667a8 8 0 1 1 16 0 8 8 0 0 1-16 0Z" fill="#FFF"/></svg>    
@@ -117,19 +117,19 @@ export default function DisplayPage() {
 
             {mediaContext === 'All' && search === '' ? 
                 
-                <>{/* When there's nothing in the search bar and we're viewing both movies and tv shows. */}        
-                    <section className="mt-2  text-xl">  
+                <div className="w-full">{/* When there's nothing in the search bar and we're viewing both movies and tv shows. */}        
+                    <section className="mt-2 text-xl">  
                         <h1 className="font-light">Trending</h1>
-                        <div className="mt-4 mx-5">
-                            <Slider {...settings} >
+                        <div className="mt-4 mx-5 ">
+                            <Slider {...settings}>
                                 {trending.map((trender, index) => {
-                                    return <TrendingTN trender={trender} index={index} onClick={setBookMark}/>
+                                    return <TrendingTN trender={trender} index={index} onClick={setBookMark} />
                                 })}
                             </Slider>
                         </div>
                     </section>   
 
-                    <section className="mt-2 mx-auto w-full text-xl">
+                    <section className="mt-2 mx-auto w-full text-xl ">
                         <h1 className="font-light">Recommended For You</h1>
                         <div className="mt-4  flex flex-wrap">
                             {entData.filter((ent) => !ent.isTrending).map((movie, index) => {
@@ -137,14 +137,14 @@ export default function DisplayPage() {
                             })}
                         </div>
                     </section>             
-                </>
+                </div>
                 : 
             mediaContext === 'All' && search !== '' ?
 
                 <>{/* When there's something in the search bar and we're viewing both movies and tv shows. */}  
-                    <section className="mt-2  text-xl">  
-                        <h1 className="font-light">Trending</h1>
-                        <div className="mt-4  flex flex-wrap">
+                    <section className="mt-2  text-xl  w-full">  
+                        <h1 className="font-light">Search Results</h1>
+                        <div className="mt-4 flex flex-wrap w-full">
                             {entData.filter((ent) => ent.title.toLowerCase().includes(search.toLowerCase())).map((movie, index) => {
                                     return <TN movie={movie} index={index} onClick={setBookMark}/>
                             })}
@@ -157,9 +157,9 @@ export default function DisplayPage() {
 
             {mediaContext === 'Movie' ?
                 // Showing movies but no search parameters
-                <section className="mt-2  text-xl">  
+                <section className="mt-2  text-xl w-full">  
                     <h1 className="font-light">Movies</h1>
-                    <div className="mt-4  flex flex-wrap">
+                    <div className="mt-4  flex flex-wrap ">
                         {search === '' ? entData.filter((ent) => ent.category === 'Movie').map((movie, index) => {
                             return <TN movie={movie} index={index} onClick={setBookMark}/>
                         })
@@ -174,14 +174,15 @@ export default function DisplayPage() {
                     </div>
                 </section>   
                 :
+            
                 null
             }
 
             {mediaContext === 'Tv' ?
                 // Showing movies but no search parameters
-                <section className="mt-2  text-xl">  
+                <section className="mt-2  text-xl w-full">  
                     <h1 className="font-light">Movies</h1>
-                    <div className="mt-4  flex flex-wrap">
+                    <div className="mt-4  flex flex-wrap ">
                         {search === '' ? entData.filter((ent) => ent.category === 'TV Series').map((movie, index) => {
                             return <TN movie={movie} index={index} onClick={setBookMark}/>
                         })
@@ -201,8 +202,8 @@ export default function DisplayPage() {
 
             {mediaContext === 'Bookmarked' ?
                 // Showing movies but no search parameters
-                <section className="mt-2  text-xl">  
-                    <h1 className="font-light">Bookedmarked Movies/Series</h1>
+                <section className="mt-2 text-xl w-full">  
+                    <h1 className="font-light">Movies</h1>
                     <div className="mt-4  flex flex-wrap">
                         {search === '' ? entData.filter((ent) => ent.isBookmarked === true).map((movie, index) => {
                             return <TN movie={movie} index={index} onClick={setBookMark}/>
