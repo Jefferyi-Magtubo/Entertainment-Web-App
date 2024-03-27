@@ -1,6 +1,6 @@
 
 export default function TrendingTN({trender, onClick} : {trender: {id: number, title: string, year: number, category: string, rating: string, thumbnail: {trending: {large: string}}, isBookmarked: boolean}, index: number, onClick: Function}) {
-    console.log(trender.id)
+
 
     return (
         <div key={trender.id} className={`w-full h-32 smh:h-48 sm:h-72 md:h-80  lg:h-100 mb-4 bg-cover bg-center rounded-lg relative hover:grayscale`} style={{backgroundImage:`url(${trender.thumbnail.trending.large})`}}>
