@@ -3,12 +3,11 @@
     gap: .1fr;
 }
 
-svg.category {
-    width: 20px;
-    height: 20px;
-
+.responsive-svg-container {
+     /* Adjust the width based on the viewport width */
+     /* Ensure the SVG doesn't exceed its container */
+    height: auto; /* Allow the browser to adjust the height to maintain aspect ratio */
 }
 
-.slick-list {margin: 0 -.5em;}
-.slick-slide>div {padding: 0 .5em;}
-
+.slick-list {margin: 0 -5px;}
+.slick-slide>div {padding: 0 5px;}
