@@ -46,15 +46,9 @@ export default function DisplayPage() {
 
         async function getTrending() {
             if(localStorage.getItem('data') === null) {
-                try{
-                    const res = await fetch('data.json')
-                    const data = await res.json()
-    
-                    localStorage.setItem('data', JSON.stringify(data))
-                }
-                catch (err) {
-                    console.log(err)
-                }
+                const res = await fetch('data.json')
+                const data = await res.json()
+                localStorage.setItem('data', JSON.stringify(data))
             }
             const data = JSON.parse(localStorage.getItem('data') as string)
             const trending = data.filter((datum : {isTrending: boolean}) => datum.isTrending === true)
