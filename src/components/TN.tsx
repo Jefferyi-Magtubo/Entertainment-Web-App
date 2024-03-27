@@ -4,7 +4,7 @@ export default function TN({movie, onClick} : {movie: {id: number, title: string
 
     return (
         <div className="flex-col md:w-1/4 xl:w-1/4  w-1/2 mb-2 " >
-            <div key={movie.id} className={`w-100% mr-2  xl:mr-3 h-24 sm:h-48 md:h-40 lg:h-52 bg-cover bg-center rounded-lg relative hover:grayscale`} style={{backgroundImage:`url(${movie.thumbnail.regular.large})`}}>
+            <div key={movie.id} className={`w-100% mr-4  xl:mr-3 h-24 sm:h-48 md:h-40 lg:h-52 bg-cover bg-center rounded-lg relative hover:grayscale`} style={{backgroundImage:`url(${movie.thumbnail.regular.large})`}}>
                 <div className="absolute z-40 bg-black bg-opacity-50  rounded-xl top-2 right-2 p-2 hover:cursor-pointer" onClick={() => onClick(movie.id)}>
                     {movie.isBookmarked ?
                         <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M10.61 0c.14 0 .273.028.4.083a1.03 1.03 0 0 1 .657.953v11.928a1.03 1.03 0 0 1-.656.953c-.116.05-.25.074-.402.074-.291 0-.543-.099-.756-.296L5.833 9.77l-4.02 3.924c-.218.203-.47.305-.756.305a.995.995 0 0 1-.4-.083A1.03 1.03 0 0 1 0 12.964V1.036A1.03 1.03 0 0 1 .656.083.995.995 0 0 1 1.057 0h9.552Z" fill="#FFF"/></svg> 
