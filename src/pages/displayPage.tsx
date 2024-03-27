@@ -47,7 +47,7 @@ export default function DisplayPage() {
         async function getTrending() {
             if(localStorage.getItem('data') === null) {
                 console.log('local is empty')
-                const res = await fetch('data.json')
+                const res = await fetch('/data.json')
                 const data = await res.json()
                 console.log(JSON.stringify(data))
                 localStorage.setItem('data', JSON.stringify(data))
