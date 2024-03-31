@@ -110,7 +110,7 @@ export default function DisplayPage() {
                     :
                     ""
                     } 
-                    className="bg-vDarkBlue w-4/5 mb-2 text-white focus:outline-none md:text-lg"
+                    className="bg-vDarkBlue w-4/5 mb-2 text-white focus:outline-none md:text-lg mt-1"
                     onChange={() => {filterBySearch()}}
                 />                
             </div>
@@ -121,7 +121,7 @@ export default function DisplayPage() {
                 <div className="w-full">{/* When there's nothing in the search bar and we're viewing both movies and tv shows. */}        
                     <section className="mt-2 text-xl">  
                         <h1 className="font-light xl:text-2xl">Trending</h1>
-                        <div className="mt-4 mx-6 xl:hidden">
+                        <div className="mt-4 ml-2 mr-8 xl:hidden">
                             <Slider {...settings}>
                                 {trending.map((trender, index) => {
                                     return <TrendingTN trender={trender} index={index} onClick={setBookMark} />

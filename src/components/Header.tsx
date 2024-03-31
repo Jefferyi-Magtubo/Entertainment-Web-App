@@ -17,7 +17,7 @@ export default function Header({setMedia, mediaDisplay} : {setMedia: Function, m
                 <svg width="25" height="25" viewBox='0 0 20 20' xmlns="http://www.w3.org/2000/svg" className="mr-5 xl:mb-5 xl:mr-0 hover:cursor-pointer lg:mb-2 xl:w-6 xl:h-6" onClick={() => setMedia('Bookmarked')}><path className='head-icon' d="M15.387 0c.202 0 .396.04.581.119.291.115.522.295.694.542.172.247.258.52.258.82v17.038c0 .3-.086.573-.258.82a1.49 1.49 0 0 1-.694.542 1.49 1.49 0 0 1-.581.106c-.423 0-.79-.141-1.098-.423L8.46 13.959l-5.83 5.605c-.317.29-.682.436-1.097.436-.202 0-.396-.04-.581-.119a1.49 1.49 0 0 1-.694-.542A1.402 1.402 0 0 1 0 18.52V1.481c0-.3.086-.573.258-.82A1.49 1.49 0 0 1 .952.119C1.137.039 1.33 0 1.533 0h13.854Z" fill={mediaDisplay === 'Bookmarked'? '#FFFFFF' : '#5A698F'}/></svg>
             </div>
 
-            <img src="/assets/image-avatar.png" className="w-8" alt="Picture of user." />
+            <img src="/assets/image-avatar.png" className="w-8 -ml-6 xl:ml-0" alt="Picture of user." />
         </header>
 
     )
